@@ -1,3 +1,6 @@
+import { CampoDeEntrada } from "../CampoDeEntrada";
+import { CampoDeFormulario } from "../CampoDeFormulario";
+import { Label } from "../Label";
 import { TituloFormulario } from "../TituloFormulario";
 
 export function FormularioDeEvento(){
@@ -6,12 +9,16 @@ export function FormularioDeEvento(){
         <TituloFormulario >
           Preencha para criar um evento:
         </TituloFormulario>
-      <fieldset>
-        <label htmlFor='nome'>
+      <CampoDeFormulario>
+        <Label htmlFor='nome'>
           Qual o nome do evento ?
-        </label>
-        <input type='text' id='nome' placeholder='Summer dev hits'/>
-      </fieldset>
+        </Label>
+        <CampoDeEntrada 
+        type='text'
+        id='nome'
+        placeholder='Summer dev hits'
+        />
+      </CampoDeFormulario>
     </form>
   )
 }
