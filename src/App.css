@@ -21,4 +21,5 @@ section img{
   border-radius: 16px;
   width: 384px;
   max-width: 90%;
+  margin: 64px auto;
 }

@@ -1,14 +1,23 @@
 import './App.css'
 
+
+function TituloFormulario({children}) {
+  return(
+    <h2>{children}</h2>
+  )
+}
+
 function FormularioDeEvento(){
   return(
     <form className='form-evento'>
-      <h2>Preencha para criar um evento:</h2>
+        <TituloFormulario >
+          Preencha para criar um evento:
+        </TituloFormulario>
       <fieldset>
         <label htmlFor='nome'>
           Qual o nome do evento ?
         </label>
-        <input type='text' id='nome'/>
+        <input type='text' id='nome' placeholder='Summer dev hits'/>
       </fieldset>
     </form>
   )
