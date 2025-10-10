@@ -1,10 +1,6 @@
 import './App.css'
 
-function TituloFormulario({children}) {
-  return(
-    <h2>{children}</h2>
-  )
-}
+
 
 function FormularioDeEvento(){
   return(
