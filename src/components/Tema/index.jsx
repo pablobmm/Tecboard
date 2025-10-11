@@ -1,5 +1,5 @@
 export function Tema({tema}){
     return(
-        <h2>{tema.nome}</h2>
+        <h3>{tema.nome}</h3>
     )
 }
