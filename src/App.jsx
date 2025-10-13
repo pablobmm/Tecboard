@@ -1,8 +1,8 @@
 import './App.css'
 import { Banner } from './components/Banner/index.jsx'
+import { CardEvento } from './components/CardEvento/index.jsx'
 import { FormularioDeEvento } from './components/FormularioEvento/index.jsx'
 import { Tema } from './components/Tema/index.jsx'
-
 
 function App() {
 
@@ -33,6 +33,14 @@ function App() {
     }
   ]
 
+  const eventos = [
+    {
+      capa: 'https://raw.githubusercontent.com/viniciosneves/tecboard-assets/refs/heads/main/imagem_1.png',
+      tema: temas[0],
+      data: new Date(),
+      titulo: "Mulheres no Front"
+    }
+  ]
 
   return (
     <main>
@@ -45,6 +53,7 @@ function App() {
         return (
           <section key={item.id}>
             <Tema tema={item} />
+            <CardEvento evento={eventos[0]}/>
           </section>
         )
       })}
