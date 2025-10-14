@@ -6,9 +6,9 @@ import { TituloFormulario } from "../TituloFormulario";
 import { Botao } from '../Botao';
 import { ListaSuspensa } from '../ListaSuspensa';
 
-export function FormularioDeEvento() {
+export function FormularioDeEvento({temas}) {
   return (
-    <form className='form-evento'>
+    <form className='form-evento' >
       <TituloFormulario >
         Preencha para criar um evento:
       </TituloFormulario>
@@ -25,6 +25,17 @@ export function FormularioDeEvento() {
           />
         </CampoDeFormulario>
         <CampoDeFormulario>
+          <Label htmlFor='capa'>
+            Qual o endereço da imagem de capa ?
+          </Label>
+          <CampoDeEntrada
+            type='text'
+            id='capa'
+            placeholder="http://..."
+            name='capa'
+          />
+        </CampoDeFormulario>
+        <CampoDeFormulario>
           <Label htmlFor='nomeEvento'>
             Data do Evento
           </Label>
@@ -38,7 +49,7 @@ export function FormularioDeEvento() {
           <Label htmlFor='nomeEvento'>
             Tema do Evento
           </Label>
-          <ListaSuspensa/>
+          <ListaSuspensa id="tema" name="tema" itens={temas}/>
         </CampoDeFormulario>
       </div>
       <div className='acoes'>
