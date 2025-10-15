@@ -6,7 +6,7 @@ import { TituloFormulario } from "../TituloFormulario";
 import { Botao } from '../Botao';
 import { ListaSuspensa } from '../ListaSuspensa';
 
-export function FormularioDeEvento({temas}) {
+export function FormularioDeEvento({temas, aoSubmeter}) {
 
   function aoFormSubmetido(formData){
     console.log("hora de criar o evento",formData)
@@ -18,7 +18,7 @@ export function FormularioDeEvento({temas}) {
       data: new Date(formData.get('dataEvento')),
       titulo: formData.get('nomeEvento')
     }
-    console.log('esse é o evento',evento)
+    aoSubmeter(evento)
   }
 
   return (
